@@ -1,3 +1,19 @@
 .hugo_build.lock
 resources/
 public/
+
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+__pycache__/
+
+.vscode/
+
+*.png
+
