@@ -13,7 +13,7 @@ def test_file_has_no_markdown_errors(filepath):
     """validate that there are zero markdown warnings against any markdown file"""  # noqa: 501 pylint: disable=line-too-long
     print(F"creating tests for file {filepath}")
 
-    with subprocess.Popen("pymarkdown -d heading-style,blanks-around-headings scan " + filepath,  # noqa: 501 pylint: disable=line-too-long
+    with subprocess.Popen("pymarkdown -d heading-style,blanks-around-headings,first-line-heading,first-line-h1 scan " + filepath,  # noqa: 501 pylint: disable=line-too-long
                           stdout=subprocess.PIPE, shell=True) as proc:
         (out, _err) = proc.communicate()
 
